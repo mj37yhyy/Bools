@@ -1,15 +1,13 @@
 package org.daisy.bools.core.engine.entity;
 
-import java.util.List;
-
 public class Rule {
 	private long id;
-	private String name;
-	private List<Packages> packages;
-	private List<Imports> imports;
-	private List<Globals> globals;
-	private List<Functions> functions;
-	private List<SubRules> subRules;
+	private long rule_id;
+	private String value;
+	private long salience;
+	private boolean noLoop;
+	private When when;
+	private Then then;
 
 	public long getId() {
 		return id;
@@ -19,52 +17,51 @@ public class Rule {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public long getRule_id() {
+		return rule_id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setRule_id(long rule_id) {
+		this.rule_id = rule_id;
 	}
 
-	public List<Packages> getPackages() {
-		return packages;
+	public String getValue() {
+		return value;
 	}
 
-	public void setPackages(List<Packages> packages) {
-		this.packages = packages;
+	public void setValue(String value) {
+		this.value = value;
 	}
 
-	public List<Imports> getImports() {
-		return imports;
+	public long getSalience() {
+		return salience;
 	}
 
-	public void setImports(List<Imports> imports) {
-		this.imports = imports;
+	public void setSalience(long salience) {
+		this.salience = salience;
 	}
 
-	public List<Globals> getGlobals() {
-		return globals;
+	public boolean isNoLoop() {
+		return noLoop;
 	}
 
-	public void setGlobals(List<Globals> globals) {
-		this.globals = globals;
+	public void setNoLoop(boolean noLoop) {
+		this.noLoop = noLoop;
 	}
 
-	public List<Functions> getFunctions() {
-		return functions;
+	public When getWhen() {
+		return when;
 	}
 
-	public void setFunctions(List<Functions> functions) {
-		this.functions = functions;
+	public void setWhen(When when) {
+		this.when = when;
 	}
 
-	public List<SubRules> getSubRules() {
-		return subRules;
+	public Then getThen() {
+		return then;
 	}
 
-	public void setSubRules(List<SubRules> subRules) {
-		this.subRules = subRules;
+	public void setThen(Then then) {
+		this.then = then;
 	}
-
 }
