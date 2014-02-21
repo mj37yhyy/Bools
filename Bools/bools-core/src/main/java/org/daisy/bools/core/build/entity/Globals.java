@@ -1,4 +1,4 @@
-package org.daisy.bools.core.engine.entity;
+package org.daisy.bools.core.build.entity;
 
 public class Globals {
 	private long id;

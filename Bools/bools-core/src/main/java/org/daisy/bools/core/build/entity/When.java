@@ -1,6 +1,6 @@
-package org.daisy.bools.core.engine.entity;
+package org.daisy.bools.core.build.entity;
 
-public class Then {
+public class When {
 	private long id;
 	private long subRule_id;
 	private String value;
@@ -28,4 +28,5 @@ public class Then {
 	public void setValue(String value) {
 		this.value = value;
 	}
+
 }

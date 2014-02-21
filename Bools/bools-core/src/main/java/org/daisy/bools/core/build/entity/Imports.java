@@ -1,6 +1,6 @@
-package org.daisy.bools.core.engine.entity;
+package org.daisy.bools.core.build.entity;
 
-public class Functions {
+public class Imports {
 	private long id;
 	private long rule_id;
 	private String value;

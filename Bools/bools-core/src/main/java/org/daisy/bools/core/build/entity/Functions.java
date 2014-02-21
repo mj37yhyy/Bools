@@ -1,6 +1,6 @@
-package org.daisy.bools.core.engine.entity;
+package org.daisy.bools.core.build.entity;
 
-public class Packages {
+public class Functions {
 	private long id;
 	private long rule_id;
 	private String value;
@@ -28,4 +28,5 @@ public class Packages {
 	public void setValue(String value) {
 		this.value = value;
 	}
+
 }

@@ -1,8 +1,8 @@
-package org.daisy.bools.core.build;
+package org.daisy.bools.core.knowledge;
 
 import java.util.Map;
 
-import org.daisy.bools.core.engine.entity.RuleSet;
+import org.daisy.bools.core.build.entity.RuleSet;
 
 public class Knowledge {
 

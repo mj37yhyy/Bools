@@ -1,6 +1,6 @@
-package org.daisy.bools.core.engine.entity;
+package org.daisy.bools.core.build.entity;
 
-public class Imports {
+public class Packages {
 	private long id;
 	private long rule_id;
 	private String value;
@@ -28,5 +28,4 @@ public class Imports {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 }
