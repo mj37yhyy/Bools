@@ -5,7 +5,7 @@ import java.util.List;
 public class RuleSet {
 	private long id;
 	private String name;
-	private String packageName;
+	private String namespace;
 	private List<Imports> imports;
 	private List<Globals> globals;
 	private List<Functions> functions;
@@ -27,12 +27,12 @@ public class RuleSet {
 		this.name = name;
 	}
 
-	public String getPackageName() {
-		return packageName;
+	public String getNamespace() {
+		return namespace;
 	}
 
-	public void setPackageName(String packageName) {
-		this.packageName = packageName;
+	public void setNamespace(String namespace) {
+		this.namespace = namespace;
 	}
 
 	public List<Imports> getImports() {
