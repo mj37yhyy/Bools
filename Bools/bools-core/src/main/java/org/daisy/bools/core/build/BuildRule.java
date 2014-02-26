@@ -9,9 +9,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BuildRule {
 	
-	public RuleSet createRuleSet(File rule) throws RuleFileException, IOException {
+	public RuleSet createRuleSet(String rule) throws RuleFileException, IOException {
 			try {
-				return (new ObjectMapper()).readValue(rule,RuleSet.class);
+				RuleSet ruleSet = (new ObjectMapper()).readValue(rule,RuleSet.class);
+				return ruleSet;
 			} catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -21,9 +22,5 @@ public class BuildRule {
 				e.printStackTrace();
 				throw new RuleFileException("RULE文件不能被正确解析并映射");
 			}
-	}
-	
-	public RuleSet createRuleSet(String ruleFileURL) throws RuleFileException, IOException {
-		return this.createRuleSet(new File(ruleFileURL));
 	}
 }
