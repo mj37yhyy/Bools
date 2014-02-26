@@ -3,21 +3,12 @@ package org.daisy.bools.core.build.entity;
 import java.util.List;
 
 public class RuleSet {
-	private long id;
 	private String name;
 	private String namespace;
 	private List<Imports> imports;
 	private List<Globals> globals;
 	private List<Functions> functions;
 	private List<Rule> rules;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
