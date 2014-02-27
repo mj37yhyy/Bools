@@ -6,7 +6,7 @@ import org.daisy.bools.core.engine.interfaces.FunctionsAgent;
 public class FunctionFactory extends AbstractFunctionFactory {
 	
 	public FunctionsAgent getInstance(){
-		FunctionsAgent agent;
+		FunctionsAgent agent = null;
 		return agent;
 	}
 

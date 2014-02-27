@@ -12,7 +12,7 @@ public abstract class AbstractFunctions {
 	 * 初始化时插入handle
 	 * @param functionsHandle
 	 */
-	public void setFunctionsHandle(FunctionsHandle functionsHandle) {
+	protected void setFunctionsHandle(FunctionsHandle functionsHandle) {
 		this.functionsHandle = functionsHandle;
 	}
 
@@ -24,7 +24,7 @@ public abstract class AbstractFunctions {
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean save(WorkMemory workMemory, Object... V) throws Exception {
+	protected boolean save(WorkMemory workMemory, Object... V) throws Exception {
 		if (V.length == 2) {
 			try {
 				workMemory.getWorkMemory().put(V[0], V[1]);
@@ -45,7 +45,7 @@ public abstract class AbstractFunctions {
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean update(WorkMemory workMemory, Object... V) throws Exception {
+	protected boolean update(WorkMemory workMemory, Object... V) throws Exception {
 		if (V.length == 2) {
 			try {
 				Map wm = workMemory.getWorkMemory();
@@ -72,7 +72,7 @@ public abstract class AbstractFunctions {
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean delete(WorkMemory workMemory, Object... V) throws Exception {
+	protected boolean delete(WorkMemory workMemory, Object... V) throws Exception {
 		if (V.length == 1) {
 			try {
 				Map wm = workMemory.getWorkMemory();
@@ -98,7 +98,7 @@ public abstract class AbstractFunctions {
 	 * @param salience
 	 * @return
 	 */
-	public boolean updateSalience(String ruleNanme, int salience) {
+	protected boolean updateSalience(String ruleNanme, int salience) {
 		functionsHandle.updateSalience(ruleNanme, salience);
 		return false;
 	}
@@ -111,7 +111,7 @@ public abstract class AbstractFunctions {
 	 *            要睡眠的迭代次数
 	 * @return
 	 */
-	public boolean sleep(String ruleNanme, int numberOfiterations) {
+	protected boolean sleep(String ruleNanme, int numberOfiterations) {
 		functionsHandle.sleep(ruleNanme, numberOfiterations);
 		return false;
 	}
@@ -122,7 +122,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean isSleep(String ruleNanme) {
+	protected boolean isSleep(String ruleNanme) {
 		functionsHandle.isSleep(ruleNanme);
 		return false;
 	}
@@ -133,7 +133,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean stop(String ruleNanme) {
+	protected boolean stop(String ruleNanme) {
 		functionsHandle.stop(ruleNanme);
 		return false;
 	}
@@ -144,7 +144,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean isStop(String ruleNanme) {
+	protected boolean isStop(String ruleNanme) {
 		functionsHandle.isStop(ruleNanme);
 		return false;
 	}
@@ -155,7 +155,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean start(String ruleNanme) {
+	protected boolean start(String ruleNanme) {
 		if (!this.isStop(ruleNanme))
 			return false;
 		functionsHandle.start(ruleNanme);
@@ -168,7 +168,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean before(String ruleNanme) {
+	protected boolean before(String ruleNanme) {
 		functionsHandle.before(ruleNanme);
 		return false;
 	}
@@ -179,7 +179,7 @@ public abstract class AbstractFunctions {
 	 * @param ruleNanme
 	 * @return
 	 */
-	public boolean after(String ruleNanme) {
+	protected boolean after(String ruleNanme) {
 		functionsHandle.after(ruleNanme);
 		return false;
 	}
