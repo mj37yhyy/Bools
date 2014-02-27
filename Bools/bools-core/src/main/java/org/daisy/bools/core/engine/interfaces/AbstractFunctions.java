@@ -9,6 +9,14 @@ public abstract class AbstractFunctions {
 	private FunctionsHandle functionsHandle;
 
 	/**
+	 * 初始化时插入handle
+	 * @param functionsHandle
+	 */
+	public void setFunctionsHandle(FunctionsHandle functionsHandle) {
+		this.functionsHandle = functionsHandle;
+	}
+
+	/**
 	 * 保存到工作内存
 	 * 
 	 * @param workMemory
