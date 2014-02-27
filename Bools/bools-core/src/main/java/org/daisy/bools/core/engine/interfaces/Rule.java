@@ -4,5 +4,5 @@ public interface Rule {
 
 	public boolean when();
 
-	public boolean then();
+	public void then();
 }
